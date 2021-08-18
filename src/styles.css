@@ -1,10 +1,24 @@
-
-
-
-
-
-
-
-.sunny-icon{
-    color: yellow;
+.weather-app{
+    border: 6px solid rgb(255, 223, 175); 
+    margin: 25px auto;
+    background-color: #FFDEDE; 
+    max-width: 700px;
+    padding: 20px;
+    font-family: Montserrat, sans-serif; 
 }
+
+
+.todays-weather{
+    list-style-type: none ;
+    margin-left: 70px;
+    margin-top: -80px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+table{
+    margin: 0 auto; 
+}
+
