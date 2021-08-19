@@ -22,3 +22,15 @@ table{
     margin: 0 auto; 
 }
 
+th{
+    text-align: center;
+}
+
+.description{
+text-transform: capitalize;
+}
+
+
+.link{
+    text-align: center;
+}
