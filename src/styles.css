@@ -16,14 +16,31 @@
 
 ul{
     list-style-type: none;
+    text-align: left;
+    padding-right: 30px; 
 }
 
+#temperature{
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 20px; 
+
+}
+
+.farenheit{
+    margin-left: 65px;
+    margin-top: -30px;
+    font-weight: bold;
+    font-size: 20px; 
+}
+
+celsius:hover, farenheit:hover{
+    opactiy: 0.7;
+    color:blue;
+    transition: all 200ms ease-in-out; 
+}
 table{
-    margin: 0 auto; 
-}
-
-th{
-    text-align: center;
+   text-align: center; 
 }
 
 .description{
