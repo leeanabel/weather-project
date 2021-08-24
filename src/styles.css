@@ -2,7 +2,7 @@
     border: 6px solid rgb(255, 223, 175); 
     margin: 25px auto;
     background-color: #FFDEDE; 
-    max-width: 700px;
+    max-width: 950px;
     padding: 20px;
     font-family: Montserrat, sans-serif; 
 }
@@ -27,8 +27,8 @@ ul{
 
 }
 
-.farenheit{
-    margin-left: 65px;
+#farenheit{
+    margin-left: 67px;
     margin-top: -30px;
     font-weight: bold;
     font-size: 20px; 
