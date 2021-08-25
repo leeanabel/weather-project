@@ -17,6 +17,13 @@ h1{
     margin-left: 7px; 
 }
 
+h2{
+    font-size: 18px;
+    margin-left: 7px; 
+    color: grey;
+}
+
+
 form{
     padding: 10px;
 }
@@ -28,7 +35,6 @@ img{
 
 #temperature{
     list-style-type: none ;
-    font-weight: bolder;
     font-size: 20px; 
     margin-left: 40px;
     margin-top: -85px;
@@ -85,13 +91,23 @@ margin-bottom: -10px;
     text-align: center; 
 }
 
-.weather-forecast .date {
+.weather-temperature img{
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+}
+
+.weather-forecast.date {
     color: grey;
+    font-size: 16px;
     opacity: 0.5;
 }
 
+weather-forecast-temperature-max{
+    opacity: 0.8;
+}
 .weather-forecast-temperature-min{
-opacity: 0.4;
+opacity: 0.5;
 }
 
 .weather-forecast-temperatures {
