@@ -34,8 +34,9 @@ function displayTemperature(response){
     let cityElement= document.getElementById("city"); 
     cityElement.innerHTML= response.data.name;
     let iconElement=document.querySelector("#icon");
-    iconElement.setAttribute ("src", `hhttp://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ; 
-    iconElement.setAttribute ("alt", response.data.weather[0].description)
+    iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ; 
+    iconElement.setAttribute ("alt", response.data.weather[0].description); 
+    celsiusTemperature = response.data.main.temp; 
 }
 
     function searchCity(city){
@@ -68,23 +69,25 @@ function showPosition(position){
     axios.get(apiUrl).then(getCurrentLocation); 
 }
 
-// Convert F -> C
 
-function convertFarenheitToCelsius(farenheit){
-    let temperature = document.getElementById("farenheit");
-    return ((temperature - 32) * 5) /9 ;
+
+function displayFahrenheitTemperature(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    let fahrenheitTemperature = (celsiusTemperature * 9/5) + 32 ; 
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature); 
 }
 
-    let F = document.getElementById("farenheit"); 
-    F.addEventListener("click", convertFarenheitToCelsius); 
-    document.querySelector(".farenheit").innerHTML = convertFarenheitToCelsius(); 
+
+function displayCelsiusTemperature(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
     
+    let farenheitLink = document.getElementById("farenheit"); 
+    farenheitLink.addEventListener("click", displayFahrenheitTemperature); 
 
-// Convert C -> F
-
-function convertCelsiustoFarenheit(celsius){
-    let temperature = document.getElementById("temperature");
-    return (temperature * 9/5) + 32 ; 
-}
-
-document.getElementById("temperature").innerHTML = convertCelsiustoFarenheit(); 
+    let celsiusTemperature = null;
+    let celsiusLink= document.getElementById("celsius");
+    celsiusLink.addEventListener ("click", displayCelsiusTemperature); 

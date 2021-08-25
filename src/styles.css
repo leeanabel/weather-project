@@ -10,17 +10,29 @@
 h1{
     font-size: 40px;
 }
+
+img{
+    margin-left: -15px;
+
+}
+
 #temperature{
     list-style-type: none ;
     font-size: 20px; 
-    margin-left: 45px;
-    margin-top: -60px;
+    margin-left: 55px;
+    margin-top: -90px;
 }
 
 #celsius{
     margin-left: 80px;
     margin-top: -27px;
 
+}
+
+.active{
+    color: black; 
+    cursor: default; 
+    text-decoration: none;
 }
 
 #farenheit{
@@ -33,7 +45,7 @@ ul{
 }
 
 
-celsius:hover, farenheit:hover{
+active:hover{
     opactiy: 0.7;
     color:blue;
     transition: all 200ms ease-in-out; 
@@ -41,14 +53,14 @@ celsius:hover, farenheit:hover{
 
 .description{
 text-transform: capitalize;
-margin-left: 45px;
+margin-left: 55px;
 margin-bottom: -10px; 
 
 }
 
 .wind{
-margin-left: 45px;
-margin-top: 15px;
+margin-left: 55px;
+margin-top: 20px;
 }
 
 .link{
