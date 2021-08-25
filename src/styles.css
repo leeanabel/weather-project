@@ -2,13 +2,23 @@
     border: 6px solid rgb(255, 223, 175); 
     margin: 25px auto;
     background-color: #FFDEDE; 
-    max-width: 950px;
+    max-width: 600px;
     padding: 30px;
     font-family: Montserrat, sans-serif; 
 }
 
+.update{
+    margin-left: 8px; 
+
+}
+
 h1{
     font-size: 40px;
+    margin-left: 7px; 
+}
+
+form{
+    padding: 10px;
 }
 
 img{
@@ -18,9 +28,10 @@ img{
 
 #temperature{
     list-style-type: none ;
+    font-weight: bolder;
     font-size: 20px; 
-    margin-left: 55px;
-    margin-top: -90px;
+    margin-left: 40px;
+    margin-top: -85px;
 }
 
 #celsius{
@@ -28,6 +39,12 @@ img{
     margin-top: -27px;
 
 }
+
+#humidity{
+    margin-left: 5px;
+    margin-top: -10px;
+}
+
 
 .active{
     color: black; 
@@ -53,15 +70,11 @@ active:hover{
 
 .description{
 text-transform: capitalize;
-margin-left: 55px;
+margin-left: 40px;
 margin-bottom: -10px; 
 
 }
 
-.wind{
-margin-left: 55px;
-margin-top: 20px;
-}
 
 .link{
     text-align: center;
