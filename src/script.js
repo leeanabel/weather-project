@@ -1,4 +1,3 @@
-console.log("Hello");
 
 // function getCity(event){
 //     event.preventDefault();
@@ -22,33 +21,41 @@ function getDate(){
     let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
     let day = days[date.getDay()]; 
 
-    document.getElementById("today").innerHTML = `${day} ${hours}:${minutes}`; 
-    
+    return `${day} ${hours}:${minutes}`; 
 }
 
 function displayTemperature(response){
     let temperatureElement=document.getElementById("temperature"); 
     temperatureElement.innerHTML= Math.round(response.data.main.temp);
-    let precipitationElement= document.getElementById("description");
-    precipitationElement.innerHTML = response.data.weather[0].description;
+    let descriptionElement= document.querySelector(".description");
+    descriptionElement.innerHTML = response.data.weather[0].description;
     let windElement = document.getElementById("wind-speed");
     windElement.innerHTML = Math.round(response.data.wind.speed); 
-    let city= document.getElementById("city"); 
-    cityElement.innerHTML= response.data.city.name;
-    
+    let cityElement= document.getElementById("city"); 
+    cityElement.innerHTML= response.data.name;
+    let iconElement=document.querySelector("#icon");
+    iconElement.setAttribute ("src", `hhttp://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`) ; 
+    iconElement.setAttribute ("alt", response.data.weather[0].description)
 }
 
-  let apiKey = "915204bb13bbec134e32fb3c5dd5973e"; 
+    function searchCity(city){
+    let apiKey = "915204bb13bbec134e32fb3c5dd5973e"; 
     let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayTemperature);
+    }
 
+    searchCity("New York"); 
 
-function searchCity(city){
-axios.get(apiUrl).then(displayTemperature);
-document.getElementById("city").innerHTML= searchCity(city);
+    function handleSubmit(event){
+    event.preventDefault(); 
+    let cityInputElement = document.querySelector("#city-input");
+    searchCity(cityInputElement.value); 
 }
 
-function getCurrentLocation(event){
+    let form = document.getElementById("search-city");
+    form.addEventListener("submit", handleSubmit);
+
+    function getCurrentLocation(event){
     event.preventDefault();
     navigator.geolocation.getCurrentLocation(showPosition); 
 }

@@ -12,31 +12,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="src/styles.css" /> 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/91aec131ec.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="src/script.js"></script>
 </head>
 <body>
     <div class="weather-app">
         <form id="search-city">
-            <input type="text" placeholder="Enter a city" id="city-input" autocomplete= "off"/>
-            <input type="submit" value="Go" onclick="getCity()"/>
+            <input type="search" placeholder="Enter a city" id="city-input" autocomplete= "off"/>
+            <input type="submit" value="Go"/>
         </form>
     <div class="update"> Last updated 20 minutes ago</div>
     <h1 id="city"> </h1>
-    <h2 id="today" onload: "getDate()"> </h2>
-    <i class="fas fa-sun" style= "font-size:85px; color:red"></i>
-    <ul class="todays-weather">
-        <li id="temperature"> °C </li>
-        <li id="farenheit"> | F </li>
-        <li> Precipitation: <span id="description"> </span> </li> 
-        <li> Wind speed: <span id="wind-speed"> </span> </li>
+    </br> 
+   <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt= "Clear" id= "icon" />
+    <ul>
+        <li id="temperature"> </li>
+        <li id="celsius"> °C  </li> 
+        <li id="farenheit"> | F  </li>
+        <li class="description"> </li> 
+        <li class="wind"> Wind speed: <span id="wind-speed"> </span> km/h </li> </div>
     </ul>
-</br>
     <div class="container">
-        </div>
-        <table border= "1" align: "center">
+        <table border= "1" align="center">
             <tr>
                 <th>Tues 10th</th>
                 <th>Weds 11th</th>
@@ -83,17 +78,14 @@
             </tr>
         </table>
     </div>
-
-
-
-
-
-
 </div>
 
 <div class="link">
 <a href="https://github.com/leeanabel/weather-project"> Open-source by Anabel Lee </a>
 </div>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/91aec131ec.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/script.js"></script>
 </body>
 </html>
